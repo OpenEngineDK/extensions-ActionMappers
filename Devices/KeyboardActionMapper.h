@@ -53,9 +53,13 @@ public:
     /**
      * Short forms for convenience.
      */
-    void onKeyPress  (Key k, Core::IListener<Action>& l) { onKeyEvent  (k, EVENT_PRESS,   l); }
-    void onKeyRelease(Key k, Core::IListener<Action>& l) { onKeyRelease(k, EVENT_RELEASE, l); }
-
+    void onKeyPress  (Key k, Core::IListener<Action>& l) { onKeyEvent(k, EVENT_PRESS,   l); }
+    void onKeyRelease(Key k, Core::IListener<Action>& l) { onKeyEvent(k, EVENT_RELEASE, l); }
+    void onKeyChange       (Key k, Core::IListener<Action>& l) { 
+            onKeyEvent(k, EVENT_PRESS,   l);
+            onKeyEvent(k, EVENT_RELEASE, l); 
+        }
+    
     /**
      * User defined conversions between keyboard events and user actions.
      */
