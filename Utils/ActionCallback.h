@@ -11,12 +11,13 @@
 #ifndef _OE_ACTION_CALLBACK_H_
 #define _OE_ACTION_CALLBACK_H_
 
+#include <Core/IListener.h>
 
 namespace OpenEngine {
 namespace Utils {
 
     template <class T, class A>
-    class ActionCallback : public IListener<A> {
+    class ActionCallback : public Core::IListener<A> {
         T* callee;
         void (T::*callback)(A);
     public:
