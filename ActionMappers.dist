@@ -1,0 +1,5 @@
+# dist file for ActionMappers
+
+darcs /extensions/ActionMappers          http://openengine.dk/code/extensions/ActionMappers
+darcs-dev /extensions/ActionMappers          fh.daimi.au.dk:/users/cgd/code/extensions/ActionMappers
+
